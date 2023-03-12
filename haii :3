@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std; 
+
+class siswa {
+    public:
+        int nisn;
+        string nama;
+        float nilai;
+    void printDataSISWA() {
+        cout<<"NISN = "<<nisn<<endl;
+        cout<<"Nama = "<<nama<<endl;
+        cout<<"Nilai = "<<nilai<<endl;
+    }
+};
+
+class guru {
+    public:
+        int nisn;
+        string nama;
+        float rating;
+    void printDataGURU() {
+        cout<<"NISN = "<<nisn<<endl;
+        cout<<"Nama = "<<nama<<endl;
+        cout<<"Rating = "<<rating<<endl;
+    }
+};
+
+int main(int argc, char const *argv[])
+{
+    siswa lima = {0003175, "Jessoca", 79.5};
+    guru empat = {0003176, "Pak Wali", 3.1};
+
+    int angka;
+    cout<<"ketik 5 untuk data siswa! ketik 4 untuk data guru! :3"<<endl; cin>>angka;
+    if (angka == 5) {
+    lima.printDataSISWA();
+    }
+  else if (angka == 4) {
+    empat.printDataGURU();
+    }
+    return 0;
+};
